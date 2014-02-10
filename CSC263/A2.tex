@@ -77,5 +77,33 @@
 \end{tikzpicture}
 \end{enumerate}
 \item
+\begin{enumerate}
+\item $m_h = F_{h+1} - F_{h+6}$ with
+
+$F_{-6} = F_{-5} = F_{-4} = F_{-3} = F_{-2} = F_{-1} = F_0 = 0, F_1 = 1; F_h = F_{h-1} + F_{h-2}$
+
+\item
+$m_0 = 1 > 1.4^0 - 1 = 0$
+
+$m_1 = 2 > 1.4^1 - 1 = 1$
+
+$m_2 = 3 > 1.96 - 1$
+
+$m_3 = 5 > 2.744 - 1$
+
+$m_4 = 8 > 3.8416 - 1$
+
+Assume that it is true for some $m_h$
+
+Then $m_{h+1} = F_{h+2} - F_{h+7} = F_{h+1} + F_h -(F_{h+6} + F_{h+5})$
+
+$= F_{h+1} - F_{h+6} + F_h - F_{h+5} = m_h + m_{h-1} \geq 1.4^h - 1 + 1.4^{h-1} -1$
+
+$= 1.4^{h-1}(1.4 + 1) -2 = 1.4^{h-1}(2.4) - 2 \geq 1.4^{h+1} - 1$
+
+$1.4^2 = 1.96 \rightarrow$
+ if $h > 4$
+ then $1.4^{h-1}(1.96+0.44)>1.4^{h+1} + (0.44)1.4^{h-1}> 1.4^{h+1} + 1$
+\end{enumerate}
 \end{enumerate}
 \end{document}
