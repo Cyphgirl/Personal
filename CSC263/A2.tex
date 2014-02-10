@@ -1,0 +1,81 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\author{Wendy Moniuk - 996659343}
+\title{CSC263 A2}
+
+\usetikzlibrary{arrows}
+
+\tikzset{
+ treenode/.style = {align=center, inner sep=0pt, text centered,
+    font=\sffamily},
+  arn_n/.style = {treenode, circle, black, font=\sffamily\bfseries, draw=black,
+    fill=white, text width=1.5em},% arbre rouge noir, noeud noir
+  arn_x/.style = {treenode, rectangle, draw=black,
+    minimum width=0.5em, minimum height=0.5em}% arbre rouge noir, nil
+}
+
+\begin{document}
+\begin{enumerate}
+\item
+\begin{enumerate}
+
+\item
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 5cm/#1,
+  level distance = 1.5cm}] 
+  \node [arn_n][label=$+$] {8}
+  		child{ node [label=$-$][arn_n] {4}
+  			child{ node [label=$-$][arn_n] {3}
+  				child { node [label=$0$] [arn_n] {1} }
+  				child { node [arn_x] {} }
+  			}
+  			child{ node [label=$0$] [arn_n] {5}
+  			}
+  		  		}
+  		child{ node [label=$-$][arn_n] {15}
+  			child{node [label=$-$][arn_n]{11}
+  				child{node [label=$+$][arn_n]{9}
+  					child{node[arn_x]{}}
+  					child{node [label=$0$][arn_n]{10}}
+  				}
+  				child{node [label=$0$][arn_n]{13}}  			
+  			}
+  			child{node [label=$+$][arn_n]{18}
+  				child{node[arn_x]{}}
+  				child{node [label=$0$][arn_n]{20}
+  			}  		
+  		}
+  		};
+\end{tikzpicture}
+
+\item
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 5cm/#1,
+  level distance = 1.5cm}] 
+  \node [arn_n] [label=$0$] {11}
+  		child{ node  [label=$0$][arn_n] {8}
+  			child{ node [label=$0$] [arn_n] {3}
+  				child { node[label=$0$] [arn_n] {1} }
+  				child { node [label=$0$][arn_n] {5} }
+  			}
+  			child{ node[label=$+$] [arn_n] {9}
+  				child{ node[arn_x]{}}
+  				child{ node [label=$0$][arn_n]{10}}
+  			}
+  		  		}
+  		child{ node[label=$+$] [arn_n] {15}
+  			child{node [label=$0$][arn_n]{13}}
+  			child{node [label=$+$][arn_n]{18}
+  				child{node[arn_x]{}}
+  				child{node[label=$0$][arn_n]{20}
+  				}  		
+  		}
+  		}
+  		;
+\end{tikzpicture}
+\end{enumerate}
+\item
+\end{enumerate}
+\end{document}
