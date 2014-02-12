@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{clrscode}
 \usepackage{tikz}
 \author{Wendy Moniuk - 996659343}
 \title{CSC263 A2}
@@ -16,6 +17,7 @@
     fill=white, text width=1.5em},% arbre rouge noir, noeud noir
   arn_x/.style = {treenode, rectangle, draw=black,
     minimum width=0.5em, minimum height=0.5em}% arbre rouge noir, nil
+
 }
 
 \begin{document}
@@ -48,7 +50,8 @@
   				child{node [label=$0$][arn_n]{20}
   			}  		
   		}
-  		};
+  		}
+  		;
 \end{tikzpicture}
 
 \item
@@ -78,14 +81,16 @@
 \end{enumerate}
 \item
 \begin{enumerate}
-\item $m_h = F_{h+1} - F_{h+6}$ with
+\item $m_h = m_{h-1} + m_{h-2} - m_{h-5}$ with
 
-$F_{-6} = F_{-5} = F_{-4} = F_{-3} = F_{-2} = F_{-1} = F_0 = 0, F_1 = 1; F_h = F_{h-1} + F_{h-2}$
+$m_{-5} = m_{-4} = m_{-3} = m_{-2} = m_{-1}= 0, m_0 =1$
+
+I found the sequence to be $1, 2, 3, 5, 8, 12, 18 27, 40$ starting from the tree of height 0 and increasing by 1.
 
 \item
 $m_0 = 1 > 1.4^0 - 1 = 0$
 
-$m_1 = 2 > 1.4^1 - 1 = 1$
+$m_1 = 2 > 1.4^1 - 1 = 0.4$
 
 $m_2 = 3 > 1.96 - 1$
 
@@ -93,17 +98,57 @@ $m_3 = 5 > 2.744 - 1$
 
 $m_4 = 8 > 3.8416 - 1$
 
-Assume that it is true for some $m_h$
+Assume that it is true for some $m_h$ where 
+$h > 4$
 
-Then $m_{h+1} = F_{h+2} - F_{h+7} = F_{h+1} + F_h -(F_{h+6} + F_{h+5})$
+Then $m_{h+1} = m_h + m_{h-1} - m_{h-5} \geq 1.4^h - 1 + 1.4^{h-1} - 1 - 1.4^{h-5} + 1 = 1.4^{h}(1+ 1.4^{-1} + 1.4^{-5}) - 1 > 1.4^h(1+ 0.7 + 0.18) -1 > 1.4^h(1.4) - 1 = 1.4^{h+1} -1$
 
-$= F_{h+1} - F_{h+6} + F_h - F_{h+5} = m_h + m_{h-1} \geq 1.4^h - 1 + 1.4^{h-1} -1$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item A AVL tree supports all of these operations. 
+\item 
+\begin{codebox}
+\Procname{$\proc{IsEmptyRange}(S,a,b)$}
+\li \If $S$ is empty
+\zi \Then
+\li		\Return \const{true}
+	\End 
+\li \If $S.root.key < a$	
+\zi \Then
+\li			\Return $\proc{IsEmptyRange}(S.right, a, b)$
+\li \ElseIf $S.root.key > b$
+\zi	\Then 
+\li 		\Return $\proc{IsEmptyRange}(S.left, a, b)$
+\End
+\li 	\Return \const{false}
+	
 
-$= 1.4^{h-1}(1.4 + 1) -2 = 1.4^{h-1}(2.4) - 2 \geq 1.4^{h+1} - 1$
+\end{codebox}
 
-$1.4^2 = 1.96 \rightarrow$
- if $h > 4$
- then $1.4^{h-1}(1.96+0.44)>1.4^{h+1} + (0.44)1.4^{h-1}> 1.4^{h+1} + 1$
+This runs in $O(\log n)$ time because it traverses at most the height of the tree and takes a constant time at each node
+\end{enumerate}
+\item
+\begin{enumerate}
+\item The data structure I will use is an AVL tree with the key being the price and each node containing the maximum floor area of its sub-tree. It can contain non-distinct nodes. For each node the right sub-tree contains nodes strictly greater than itself and the left sub-tree equal to or less than itself.
+
+The diagram below shows the tree after (13, 5), (10, 6), (15, 10) have been added.
+
+ \begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 5cm/#1,
+   level distance = 1.5cm}] 
+    \node [arn_n] [label=$0$] [label=left:$10$] {13 5}
+    child { node [arn_n] [label=$0$] [label=left:$6$] {10 6}}
+    child { node [arn_n] [label=$0$] [label=left:$10$] {15 10}}
+    ;
+ \end{tikzpicture}
+\item Insert is done at first the usual way for an AVL tree. After a new node is added, or after rebalancing, all the max areas of the ancestors are updated. For delete it is similar, done in the usual way and then max areas are updated.
+
+For MaxArea, we start at the root and check if p is greater than the root.  An empty tree will return -1. If it is not we call again on the left sub-tree. If it is we keep a variable of the maximum of the max-area of the left sub-tree and the root's area, and call again on to the right sub-tree passing along the current maximum. This is all done in a helper function so we can pass along the current maximum. Once we reach the bottom of the tree we return the maximum over the traversal.
+
+All of these algorithms meet the time requirements. Insert for an AVL tree takes $O(\log n)$ and there will be on the order of log(n) ancestors to update the max-area, where each update takes constant time. Delete for AVL trees also takes 
+$O(\log n)$ time, and again there are log(n) ancestors to update. 
+
+MaxArea takes a constant time at each node, 2 comparisons, and it traverses $O(\log n)$ nodes (the height of the tree).
 \end{enumerate}
 \end{enumerate}
 \end{document}
