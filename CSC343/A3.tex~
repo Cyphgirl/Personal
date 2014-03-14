@@ -1,0 +1,10 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Wendy Moniuk - 996659343}
+\title{CSC263 Assignment 1}
+\begin{document}
+
+\end{document}
