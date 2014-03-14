@@ -34,9 +34,8 @@
   				child { node [label=$0$] [arn_n] {1} }
   				child { node [arn_x] {} }
   			}
-  			child{ node [label=$0$] [arn_n] {5}
-  			}
-  		  		}
+  			child{ node [label=$0$] [arn_n] {5}}
+  		}
   		child{ node [label=$-$][arn_n] {15}
   			child{node [label=$-$][arn_n]{11}
   				child{node [label=$+$][arn_n]{9}
@@ -47,13 +46,11 @@
   			}
   			child{node [label=$+$][arn_n]{18}
   				child{node[arn_x]{}}
-  				child{node [label=$0$][arn_n]{20}
-  			}  		
-  		}
-  		}
-  		;
+  				child{node [label=$0$][arn_n]{20}}  		
+                        }
+                }
+	;
 \end{tikzpicture}
-
 \item
 \begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 5cm/#1,
   level distance = 1.5cm}] 
@@ -83,7 +80,7 @@
 \begin{enumerate}
 \item $m_h = m_{h-1} + m_{h-2} - m_{h-5}$ with
 
-$m_{-5} = m_{-4} = m_{-3} = m_{-2} = m_{-1}= 0, m_0 =1$
+$m_{-5} = m_{-4} = m_{-3} = m_{-2} = m_{-1}= 0, m_0 =1, m_1 = 2$
 
 I found the sequence to be $1, 2, 3, 5, 8, 12, 18 27, 40$ starting from the tree of height 0 and increasing by 1.
 
@@ -101,12 +98,12 @@ $m_4 = 8 > 3.8416 - 1$
 Assume that it is true for some $m_h$ where 
 $h > 4$
 
-Then $m_{h+1} = m_h + m_{h-1} - m_{h-5} \geq 1.4^h - 1 + 1.4^{h-1} - 1 - 1.4^{h-5} + 1 = 1.4^{h}(1+ 1.4^{-1} + 1.4^{-5}) - 1 > 1.4^h(1+ 0.7 + 0.18) -1 > 1.4^h(1.4) - 1 = 1.4^{h+1} -1$
+Then $m_{h+1} = m_h + m_{h-1} - m_{h-5} \geq 1.4^h - 1 + 1.4^{h-1} - 1 - 1.4^{h-5} + 1 = 1.4^{h}(1+ 1.4^{-1} - 1.4^{-5}) - 1 > 1.4^h(1+ 0.7 - 0.18) -1 > 1.4^h(1.4) - 1 = 1.4^{h+1} -1$
 
 \end{enumerate}
 \item
 \begin{enumerate}
-\item A AVL tree supports all of these operations. 
+\item A AVL tree supports all of these operations in the correct run time without modifications. 
 \item 
 \begin{codebox}
 \Procname{$\proc{IsEmptyRange}(S,a,b)$}
@@ -141,7 +138,7 @@ The diagram below shows the tree after (13, 5), (10, 6), (15, 10) have been adde
     child { node [arn_n] [label=$0$] [label=left:$10$] {15 10}}
     ;
  \end{tikzpicture}
-\item Insert is done at first the usual way for an AVL tree. After a new node is added, or after rebalancing, all the max areas of the ancestors are updated. For delete it is similar, done in the usual way and then max areas are updated.
+\item Insert is done at first the usual way for an AVL tree. After a new node is added, or after rebalancing, all the max areas of the ancestors or, nodes involved in rotations, are updated. For delete it is similar, done in the usual way and then max areas are updated.
 
 For MaxArea, we start at the root and check if p is greater than the root.  An empty tree will return -1. If it is not we call again on the left sub-tree. If it is we keep a variable of the maximum of the max-area of the left sub-tree and the root's area, and call again on to the right sub-tree passing along the current maximum. This is all done in a helper function so we can pass along the current maximum. Once we reach the bottom of the tree we return the maximum over the traversal.
 
