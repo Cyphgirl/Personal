@@ -1,0 +1,39 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Wendy Moniuk - 996659343}
+\title{A3 q3}
+\begin{document}
+\begin{enumerate}
+\item The sample space of this algorithm is all possible permutations of the list l. The probabilities of this sample space only vary with the position of n because the orders of all the other elements are equally likely.
+
+Prob[n is in $i^{th}$
+position] = $\frac{1}{2}^i$
+
+\item Prob[$l$
+ is not in $i_1 \dots i_m$] $ = \begin{cases}
+ \frac{1}{2}^m 			& l = n\\
+ (1-\frac{1}{2n})^{m} 	& l \neq n\\
+ \end{cases}$
+ 
+ If n does not appear in $i$ then that is the probability of not choosing n, m times. Similarly the probability of l not appearing in 
+ $i$ is 
+ $1 - $ the probability of choosing l, m times.
+ 
+ \item $P_l = \frac{1}{2} + \frac{1}{2}(1-\frac{1}{2n}) \frac{1}{2}(1-\frac{1}{2n})^2 + \dots + \frac{1}{2}(1-\frac{1}{2n})^{m-1}$
+ 
+ $ = \frac{1}{2}\sum\limits_{i = 1}^{m} \frac{1}{2}(1-\frac{1}{2n})^{i-1} = n(1-(1-\frac{1}{2n})^m)$
+ 
+ The sum comes from the chance of n being picked at each $i$ over our element not being picked. So it is the probabilty that n was picked multiplied by the probability l was not picked before hand summed over each possible position of n. 
+ 
+ \item $E[B_l] = 1\cdot $ prob[l is before n] 
+ $ + 0\cdot $ prob[n is before l]
+ $ = 1 - P_l = 1-n(1-(1-\frac{1}{2n})^m)$
+ 
+ \item $E[T] = \sum\limits_{l = 0}^{n-1} E[B_l]$
+ 
+ $ = n(1-n(1-(1-\frac{1}{2n})^m)) = n - n^2 + n^2(1-\frac{1}{2n})^m$
+\end{enumerate}
+\end{document}

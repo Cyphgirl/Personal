@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.11.1)  12 FEB 2014 08:56
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.11.1)  12 FEB 2014 19:06
 entering extended mode
 **A2.tex
 (C:\Users\Wendy\Documents\GitHub\Personal\CSC263\A2.tex
@@ -417,15 +417,7 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 librarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryarrows.code.tex"
-File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.code.t
-ex"
-File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
-\arrowsize=\dimen157
-)) (C:\Users\Wendy\Documents\GitHub\Personal\CSC263\A2.aux)
+(C:\Users\Wendy\Documents\GitHub\Personal\CSC263\A2.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
@@ -443,27 +435,27 @@ ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count122
-\scratchdimen=\dimen158
+\scratchdimen=\dimen157
 \scratchbox=\box38
 \nofMPsegments=\count123
 \nofMParguments=\count124
 \everyMPshowfont=\toks31
 \MPscratchCnt=\count125
-\MPscratchDim=\dimen159
+\MPscratchDim=\dimen158
 \MPnumerator=\count126
 \makeMPintoPDFobject=\count127
 \everyMPtoPDFconversion=\toks32
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 32.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 32.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 32.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 24.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -873,10 +865,15 @@ l.54   		;
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+
+Overfull \hbox (31.86078pt too wide) in paragraph at lines 55--56
+[][] 
+ []
+
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -884,7 +881,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -892,7 +889,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -900,7 +897,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -908,7 +905,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -916,7 +913,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -924,7 +921,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -932,7 +929,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -940,7 +937,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -948,7 +945,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -956,7 +953,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -964,142 +961,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-
-! Package xcolor Error: Undefined color `{treenode, rectangle, draw=black, mini
-mum width=0.5em, minimum height=0.5em}{\@@par }'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.79   		;
-          
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `{treenode, rectangle, draw=black, mini
-mum width=0.5em, minimum height=0.5em}{\@@par }'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.79   		;
-          
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `{treenode, rectangle, draw=black, mini
-mum width=0.5em, minimum height=0.5em}{\@@par }'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.79   		;
-          
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
-          
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \@@par 
-l.79   		;
+l.78   		;
           
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1112,7 +974,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.79   		;
+l.78   		;
           
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1125,7 +987,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.79   		;
+l.78   		;
           
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1138,35 +1000,184 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.79   		;
+l.78   		;
           
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \@@par 
+l.78   		;
+          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+
+! Package xcolor Error: Undefined color `{treenode, rectangle, draw=black, mini
+mum width=0.5em, minimum height=0.5em}{\@@par }'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78   		;
+          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package xcolor Error: Undefined color `{treenode, rectangle, draw=black, mini
+mum width=0.5em, minimum height=0.5em}{\@@par }'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78   		;
+          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package xcolor Error: Undefined color `{treenode, rectangle, draw=black, mini
+mum width=0.5em, minimum height=0.5em}{\@@par }'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78   		;
+          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (31.86078pt too wide) in paragraph at lines 79--80
+[][] 
+ []
 
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(C:\Users\Wendy\Documents\GitHub\Personal\CSC263\A2.aux) ) 
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (14.77464pt too wide) in paragraph at lines 136--138
+[]\OT1/cmr/m/n/10 The di-a-gram be-low shows the tree af-ter $(\OML/cmm/m/it/10
+ p; s\OT1/cmr/m/n/10 )$ pairs $(13\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 5)\OML/cmm
+/m/it/10 ; \OT1/cmr/m/n/10 (10\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6)\OML/cmm/m/i
+t/10 ; \OT1/cmr/m/n/10 (15\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10)$
+ []
+
+[2] [3] (C:\Users\Wendy\Documents\GitHub\Personal\CSC263\A2.aux) ) 
 Here is how much of TeX's memory you used:
- 10892 strings out of 494045
- 205433 string characters out of 3148387
- 267642 words of memory out of 3000000
- 13979 multiletter control sequences out of 15000+200000
- 7467 words of font info for 31 fonts, out of 3000000 for 9000
+ 10673 strings out of 494045
+ 198556 string characters out of 3148387
+ 249412 words of memory out of 3000000
+ 13754 multiletter control sequences out of 15000+200000
+ 12729 words of font info for 53 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 56i,14n,76p,499b,1601s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on A2.pdf (2 pages, 103735 bytes).
+ 56i,14n,76p,499b,1538s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on A2.pdf (3 pages, 125578 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
