@@ -34,9 +34,8 @@
   				child { node [label=$0$] [arn_n] {1} }
   				child { node [arn_x] {} }
   			}
-  			child{ node [label=$0$] [arn_n] {5}
-  			}
-  		  		}
+  			child{ node [label=$0$] [arn_n] {5}}
+  		}
   		child{ node [label=$-$][arn_n] {15}
   			child{node [label=$-$][arn_n]{11}
   				child{node [label=$+$][arn_n]{9}
@@ -47,13 +46,11 @@
   			}
   			child{node [label=$+$][arn_n]{18}
   				child{node[arn_x]{}}
-  				child{node [label=$0$][arn_n]{20}
-  			}  		
-  		}
-  		}
-  		;
+  				child{node [label=$0$][arn_n]{20}}  		
+                        }
+                }
+	;
 \end{tikzpicture}
-
 \item
 \begin{tikzpicture}[level/.style={sibling distance=60mm/#1}]
   \node [arn_n] [label=$0$] {11}
@@ -82,7 +79,11 @@
 \begin{enumerate}
 \item $m_h = m_{h-1} + m_{h-2} - m_{h-5}, h > 1$ with
 
+<<<<<<< HEAD
 $m_{-3} = m_{-2} = m_{-1}= 0, m_0 =1, m_1 = 2$
+=======
+$m_{-5} = m_{-4} = m_{-3} = m_{-2} = m_{-1}= 0, m_0 =1, m_1 = 2$
+>>>>>>> a14aaa258ce9dd9df62c2d8b86f8320191211104
 
 I found the sequence to be $1, 2, 3, 5, 8, 12, 18, 27, 40$ starting from the tree of height 0 and increasing by 1. The pattern starts out like the Fibonacci sequence, but there is a correction factor needed for 
 $h \geq 5$ that follows the Fibonacci sequence as well. 
@@ -106,7 +107,11 @@ Then $m_{h+1} = m_h + m_{h-1} - m_{h-5} \geq 1.4^h - 1 + 1.4^{h-1} - 1 - 1.4^{h-
 \end{enumerate}
 \item
 \begin{enumerate}
+<<<<<<< HEAD
 \item An AVL tree supports all of these operations, all in $O(\log n)$ time.. 
+=======
+\item A AVL tree supports all of these operations in the correct run time without modifications. 
+>>>>>>> a14aaa258ce9dd9df62c2d8b86f8320191211104
 \item 
 \begin{codebox}
 \Procname{$\proc{IsEmptyRange}(S,a,b)$}
@@ -142,7 +147,11 @@ $(13, 5), (10, 6), (15, 10)$ have been added.
     child { node [arn_n] [label=$0$] [label=left:$10$] {15 10}}
     ;
  \end{tikzpicture}
+<<<<<<< HEAD
 \item Insert is done at first the usual way for an AVL tree. After a new node is added, or after rebalancing, all the max areas of the ancestors, as well as nodes involved in rotations are updated. The updates would take the same amount of time as the balance factor updates. For delete it is similar, done in the usual way and then max areas are updated.
+=======
+\item Insert is done at first the usual way for an AVL tree. After a new node is added, or after rebalancing, all the max areas of the ancestors or, nodes involved in rotations, are updated. For delete it is similar, done in the usual way and then max areas are updated.
+>>>>>>> a14aaa258ce9dd9df62c2d8b86f8320191211104
 
 For MaxArea, we start at the root and check if p is greater than the root.  An empty tree will return -1. If it is not we call again on the left sub-tree. If it is we keep a variable of the maximum of the max-area of the left sub-tree and the root's area, and call again on to the right sub-tree passing along the current maximum. This is all done in a helper function so we can pass along the current maximum. Once we reach the bottom of the tree we return the maximum over the traversal.
 
