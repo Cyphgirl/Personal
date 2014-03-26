@@ -1,0 +1,21 @@
+1a
+
+Go through each column, find a column j that has all ones. Check row j to see if it is all zeros except in column j. If this check fails there is no movie star and end.
+
+
+2a 	1 [1,8]
+	2 [5,6]
+	3 [9,10]
+	4 [4,7]
+	5 [11,14]
+	6 [12,13]
+	7 [2,3]
+
+b 	10 crossedges
+	1 forward edge
+	0 back edges
+
+c 	no back edges -> no cycles -> no course can require itself -> there is a course that has no requirements -> there is a course that is not a prerequisite for anything and there is a path between them.
+
+d	5,6,3,1,4,2,7
+	Topological sort from pg 613 CLRS
