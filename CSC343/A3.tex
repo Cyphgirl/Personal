@@ -8,6 +8,7 @@
 \author{Wendy Moniuk - 996659343}
 \title{CSC343 Assignment 3}
 \begin{document}
+\maketitle
 \begin{enumerate}
 
 \item I am assuming that emails are unique among guests and hosts.
@@ -28,6 +29,13 @@ A member can join zero or more groups.
 
 A group may have zero or more messages. A member can post no messages or many messages. A post must be associated with at least one member and at least one group
 
+The Administrator is someone who has access to the database but they do not need information stored about them.
+
+Search is a function implemented on the database and does not need any stored data.
+
+The overall credibility score is calculated by the app and not stored in the database, it uses an aggeregate function over the rating.
+
+If a post is the first in a chain of replies it lists itself as what it is replying to.
 
 
 \item See figure.
@@ -43,62 +51,23 @@ City(\underline{cityName})
 
 Group(\underline{GroupID}, Desc, type, category)
 
-Event(\underline{Eid}, CreatedBy, date, time, location, description)
+Event(\underline{Eid}, \textbf{CreatedBy}, date, time, location, description)
 
 Post(\underline{pid}, message)
 
-CouchRequest(\underline{RID}, guest, host, status, deptartureDate, arrivalDate, rating, note, testimonial)
+CouchRequest(\underline{RID},\textbf{ guest, host}, status, deptartureDate, arrivalDate, rating, note, testimonial)
 
-Residesin(\underline{mid}, \underline{country}, \underline{city})
+Residesin(\textbf{\underline{mid}, \underline{country}, \underline{city}})
 
-Friendship(\underline{member1}, \underline{member2}, dateMet, Show, RequestStatus, Description)
+Friendship(\textbf{\underline{member1}, \underline{member2}}, dateMet, Show, RequestStatus, Description)
 
-Joined(\underline{mid}, \underline{groupID})
+Joined(\textbf{\underline{mid}, \underline{groupID}})
 
-Messages(\underline{mid}, \underline{pid}, \underline{groupID}, groupOnly, replyTo)
+Messages(\textbf{\underline{mid}, \underline{pid}, \underline{groupID}}, groupOnly, \textbf{replyTo})
 
-Invite(\underline{eid}, \underline{inviter}, \underline{invitee})
+Invite(\textbf{\underline{eid}, \underline{inviter}, \underline{invitee}})
 
-Going(\underline{eid}, \underline{mid})
-
-CouchRequest(guest) $\subseteq$ $\pi_{email}\sigma_{isHost = false}$Member
-
-CouchRequest(host) $\subseteq$ 
-$\pi_{email}\sigma_{isHost = true}$Member
-
-Event(CreatedBy) $\subseteq$ Member(email)
-
-Residesin(mid) $\subseteq$ Member(email)
-
-Residesin(country) $\subseteq$ Country(countryName)
-
-Residesin(city) $\subseteq$ City(cityName)
-
-Friendship(member1) $\subseteq$ Member(email)
-
-Friendship(member2) $\subseteq$ Member(email)
-
-Joined(mid) $\subseteq$ Member(email)
-
-Joined(groupID) $\subseteq$ Group(GroupID)
-
-Messages(mid) $\subseteq$ Member(email)
-
-Messages(pid) $\subseteq$ Post(pid)
-
-Messages(groupID) $\subseteq$ Group(GroupID)
-
-Invite(eid) $\subseteq$ Event(eid)
-
-Invite(inviter) $\subseteq$ Member(email)
-
-Invite(invitee) $\subseteq$ Member(email)
-
-Going(eid) $\subseteq$ Event(eid)
-
-Going(mid) $\subseteq$ Member(email)
-
-$\sigma_{rating>5 \bigvee rating < 1}$CouchRequest $\subseteq \emptyset$
+Going(\textbf{\underline{eid}, \underline{mid}})
 
 \item
 
@@ -148,7 +117,7 @@ message varchar(300)
 CREATE TABLE couchrequest(
 rid integer PRIMARY KEY,
 guest varchar(50) REFERENCES member(email),
-host varchar(50) REFERENCES memver(email),
+host varchar(50) REFERENCES member(email),
 status char(8),
 CHECK status = 'ACCEPTED' or status = 'PENDING' or status = 'DECLINED'
  or status = 'MAYBE',
@@ -187,7 +156,7 @@ mid varchar(50) REFERENCES member(email),
 pid integer REFERENCES post,
 groupID integer REFERENCES group,
 grouponly boolean,
-replyto integer,
+replyto integer REFERENCES post
 );
 
 CREATE TABLE invite(
