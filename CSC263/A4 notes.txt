@@ -19,3 +19,29 @@ c 	no back edges -> no cycles -> no course can require itself -> there is a cour
 
 d	5,6,3,1,4,2,7
 	Topological sort from pg 613 CLRS
+
+3a No sources -> at least one cycle
+
+pf if there are no sources then every node has at least one other node pointing to it. In a DFS of G consider the roots of all of the discovery trees. They must all have at least one other node pointing to it. These edges are either back edges or cross edges. If one is a back edge we are done, there is a cycle. If all are cross edges, then we can start at one root and follow down the discovery path until we reach a cross-edge to another root. Take this edge to the next root and continue till we get to a root we have already discovered. This is a cycle in G. There for by contrapositive if G is acyclic then it has at least one source.
+
+3b Spose graph is acyclic.|->
+deleting a node from an acyclic graph also leads to an acyclic graph. An acyclic graph has at least one source, so there is always a source to delete until the graph is empty
+
+<-| If source-deletion results in an empty graph then the last node to be deleted is a source, a single node that is a source is acyclic. Continuing in the reverse order of deletions and assuming that after the deletion in question we have an acyclic graph. We have a source node S that will be deleted and a graph G' that is acyclic, G' is the nodes of G that are not S. S is a source so it only points to nodes in G' and no nodes in G' point to it. The only place for a cycle to occur in G is through the addition of node S to G' but because S is a source there is no way to reach S from G' so there cannot be a cycle in G. 
+	QED
+
+3c
+S is a linked list with another variable size(S) that keeps track of its size.
+for each edge (u,v) increment I(v)
+Iterate through I and append any v to S if I(v) = 0 increment size(S)
+Starting at the begining of S and taking each node u in S until we reach the end.
+For each edge leading out of (u,v) 
+decrement I(v), check if I(v) = 0, if it does append v to S, increment size(S)
+
+When at the end of S compare size(S) to n, if they are equal the there are no cycles.
+
+this runs in O(m + n).
+
+Populating I(v) is O(m)
+Populating S is O(n)
+The loop is O(m)
